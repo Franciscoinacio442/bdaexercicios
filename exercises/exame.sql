@@ -1,5 +1,6 @@
 -- para os exercícios iniciais, utiliza a tabela [DEPARTMENTS]/[JOB]
 -- 1. Identifica as colunas de preenchimento obrigatório
+USE BikeStores
 SELECT * FROM INFORMATION_SCHEMA.COLUMNS c WHERE c.TABLE_NAME = 'DEPARTMENTS' AND c.IS_NULLABLE = 'NO';
 -- 2. Insere um novo departamento/função, de nome 'DEISI'/'Dean', executando os seguintes comandos
 -- 2.1. Identifica o último código da tabela
