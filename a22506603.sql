@@ -110,3 +110,11 @@ UNION
 SELECT Cidade COUNT(*) FROM Fornecedores
 WHERE Pais = 'Portugal'
 ORDER BY Cidade;
+
+SELECT 
+    c.Nome,
+    COUNT(p.PedidoID) AS TotalPedidos,
+    MAX(p.DataPedido) AS UltimoPedido
+FROM Clientes c
+INNER JOIN Pedidos p ON c.ClienteID = p.ClienteID
+GROUP BY c.Nome;
